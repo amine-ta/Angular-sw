@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-sm-6" *ngIf = vaiseauDetail>
+    <ul class="list-group"  >
+      <li class="list-group-item">{{vaiseauDetail.name}}</li>
+      <li class="list-group-item">Cargo capacity : {{vaiseauDetail.cargo_capacity}}</li>
+      <li class="list-group-item">Cost in credits : {{vaiseauDetail.cost_in_credits}}</li>
+      <li class="list-group-item">Created : {{vaiseauDetail.created}}</li>
+      <li class="list-group-item">{{vaiseauDetail.crew}}</li>
+      <li class="list-group-item">{{vaiseauDetail.edited}}</li>
+      <li class="list-group-item">{{vaiseauDetail.crew}}</li>
+      <li class="list-group-item">{{vaiseauDetail.hyperdrive_rating}}</li>
+      <li class="list-group-item">{{vaiseauDetail.length}}</li>
+      <li class="list-group-item">{{vaiseauDetail.manufacturer}}</li>
+      <li class="list-group-item">{{vaiseauDetail.model}}</li>
+      <li class="list-group-item">{{vaiseauDetail.max_atmosphering_speed}}</li>
+      <li class="list-group-item">{{vaiseauDetail.name}}</li>
+      <li class="list-group-item">{{vaiseauDetail.passengers}}</li>
+      <li class="list-group-item">{{vaiseauDetail.starship_class}}</li>
+      <li class="list-group-item">{{vaiseauDetail.url}}</li>
+    </ul>
+   
+      <h4>Pilotes</h4>
+      <ul class="list-group" *ngFor="let pilote of vaiseauDetail.pilotesDisplay"> 
+        <li class="list-group-item" (click)="detailPilote(pilote)"  >name: {{pilote.name}}  -  birth_year: {{pilote.birth_year}}</li>
+      </ul>
+  </div>
+  <div class="col-sm-6">
+    <app-pilote-detail [pilote]="currentPilote"></app-pilote-detail>
+  </div>
+</div>
+ 
+ 
+
+
+
+
+

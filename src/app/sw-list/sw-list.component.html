@@ -1,0 +1,16 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-4">           
+            <div class="list-group">    
+                <a *ngFor="let vaiseau of Vaisseaux" class="list-group-item"  (click)="detailVaiseau(vaiseau)">                                          
+                            Name : {{vaiseau.name}}                                
+                  </a>
+              </div>
+      </div>
+      <div class="col-sm-8"> 
+        <app-detail-sw [vaiseauDetail]="currentItem"></app-detail-sw>
+      </div>
+    </div>
+  </div>
+
